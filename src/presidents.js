@@ -450,7 +450,14 @@ function sortPresidentsByBirthYear(presidentsArr) {
 }
 
 // Bonus: Iteration 5 | Age at Inauguration - `map()`
-function getAgeAtInauguration(presidentsArr) {}
+function getAgeAtInauguration(presidentsArr) {
+  const presidentsAgeArry = presidentsArr.map((elm) => {
+    const ageAtInauguration = elm.tookOffice - elm.birthYear;
+    elm.ageAtInauguration = ageAtInauguration;
+    return elm;
+  });
+  return presidentsAgeArry;
+}
 
 // Bonus: Iteration 6 | Presidents Born After - `filter()`
 function getPresidentsBornAfter(presidentsArr, year) {}
